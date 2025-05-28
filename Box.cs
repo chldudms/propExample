@@ -11,44 +11,51 @@ namespace ConsoleApp1
         private int width;
         private int height;
 
+        public int Width
+        { get { return width; }
+            set
+            {
+                if (value > 0)
+                {
+                    Console.WriteLine("너비는 자연수로 입력해주세요");
+                }
+                else
+                {
+                    Width = value;
+                }
+            }
+        }
+
+        public int Height
+        {
+            get { return height; }
+            set
+            {
+                if (value > 0)
+                {
+                    Console.WriteLine("높이는 자연수로 입력해주세요");
+                }
+                else
+                {
+                    Height = value;
+                }
+            }
+        }
+
         public Box(int width, int height)
         {
             this.width = width;
             this.height = height;
         }
 
-        public int getWidth()
-        { return width; }
-        public int getHeight()
-        { return height; }
+        private int area;
 
-        public void setWidth(int width)
+        public int Area
         {
-            if (width > 0)
-            {
-                this.width = width;
-            }
-            else
-            {
-                Console.WriteLine("자연수로 입력해주세요");
-            }
+            get { return Width * Height; }
+     
         }
 
-        public void setHeight(int height)
-        {
-            if (height > 0)
-            {
-                this.height = height;
-            }
-            else
-            {
-                Console.WriteLine("자연수로 입력해주세요");
-            }
-        }
-
-        public int Area()
-        {
-            return width * height;
-        }
+      
     }
 }
