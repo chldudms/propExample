@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+   
     class Program
     {
+
+        public static int classVar = 0;
         static void Main(string[] args)
         {
-          Box box1 = new Box(100,200);
+            //클래스 변수 호출
+            Program.classVar = -1;
+            //인스턴스 변수처럼 클래스 변수 사용 불가에 주의 (자바에서는 ok)
+            // Program p = new Program();
+            //p.classvar = 1; 
+
+            Console.WriteLine();
+
+            Box box1 = new Box(100,200);
             box1.Width = -3;
             Console.WriteLine(box1.Width);
             Console.WriteLine(box1.Area);
