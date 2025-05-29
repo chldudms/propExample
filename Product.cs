@@ -33,5 +33,11 @@ namespace PropExample32
             }
             return product;
         }
+
+        ~Product()
+        {
+            Console.WriteLine("소멸자 호출");
+        }
     }
+
 }
