@@ -25,6 +25,12 @@ namespace PropExample32
             test1.value = 5;
             Change(test1); // test1을 참조로 전달
             Console.WriteLine(test1.value); // 20 출력
+
+            Test testA = new Test();
+            Test testB = testA; // testA의 참조를 testB에 할당
+            testA.value = 10;
+            testB.value = 20; // testB를 통해 값 변경
+            Console.WriteLine(testA.value); // 20 출력
         }
         class Test
         {

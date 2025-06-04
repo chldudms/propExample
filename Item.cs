@@ -9,13 +9,12 @@ namespace ConsoleApp1
     class Item
     {
         private static int count;
-        public readonly int id;
+        public readonly int id = -1;
         public string name;
         public int price;
-
-        public Item( string name, int price)
+        public Item(string name, int price)
         {
-            int id = count++;
+            id = count++;
             this.name = name;
             this.price = price;
         }
