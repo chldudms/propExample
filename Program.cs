@@ -10,9 +10,9 @@ namespace PropExample32
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
             //상수 readonly 키워드 비교 예제
-           Item item1 = new Item( "고구마", 1000);
+            Item item1 = new Item("고구마", 1000);
             Item item2 = new Item("감자", 2000);
             Item item3 = new Item("옥수수", 3000);
             Console.WriteLine(item1.id);
@@ -31,6 +31,11 @@ namespace PropExample32
             testA.value = 10;
             testB.value = 20; // testB를 통해 값 변경
             Console.WriteLine(testA.value); // 20 출력
+
+            // 피보나치 재귀 함수
+            Fibonacci fibo = new Fibonacci();
+            Console.WriteLine(fibo.Get(1));
+            Console.WriteLine(fibo.Get(100));
         }
         class Test
         {
